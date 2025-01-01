@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+    <style>
+        .fade-text {
+            transition: opacity 0.5s ease-in-out;
+        }
+        .fade-out {
+            opacity: 0;
+        }
+        .custom-bg {
+            background-color: #181c21da;
+        }
+        .custom-bgg {
+            background-color: transparent;
+        }
+        .box-shadow {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <title>Street HUD</title>
+</head>
+<body>
+    <div id="hud" class="absolute top-2 left-[730px] flex gap-2 text-white custom-bggg p-1.5 rounded-lg font-medium font-sans transition-all duration-300">
+        <div class="location-container flex items-center custom-bg p-1.5 rounded-lg box-shadow transition-all duration-300">
+            <i class="mdi mdi-compass-outline icon text-white text-xl mr-1.5 transition-colors duration-300"></i>
+            <span id="direction" class="text-sm fade-text">SW</span>
+        </div>
+        <div class="location-container flex items-center custom-bg p-1.5 rounded-lg box-shadow transition-all duration-300">
+            <i class="mdi mdi-map-marker-outline icon text-white text-xl mr-1.5 transition-colors duration-300"></i>
+            <span id="street" class="text-sm fade-text"></span><span id="crossing" class="text-sm fade-text"></span>
+        </div>
+        <div class="location-container flex items-center custom-bg p-1.5 rounded-lg box-shadow transition-all duration-300">
+            <i class="mdi mdi-map-outline icon text-white text-xl mr-1.5 transition-colors duration-300"></i>
+            <span id="zone" class="text-sm fade-text">Pillbox Hill</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
